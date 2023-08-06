@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>show data</title>
+    <style>
+      table{
+        margin: 80px;
+        color:yellowgreen
+        
+      }
+    </style>
+</head>
+<body>
+<h1> عرض البيانات</h1> <br>
+<table border="2" with="700"  >
+  <tr>
+    <th>id</th>
+    <th>Fulname</th>
+    <th>email</th>
+    <th>age</th>
+    <th>dateBarty</th>
+    <th>update</th>
+    <th>delet</th>
+    </tr>
+  {% for v in d %}
+  <tr>
+    <td>{{v.id}}</td>
+    <td> {{v.fullname}}</td>
+    <td> {{v.email}}</td>
+    <td> {{v.age}}</td>
+    <td> {{v.barty}}</td>
+    <td> <a href="{% url 'form_updat' v.id %}">update</a></td>
+    <td> <a href="{% url 'backend3' v.id %}">delet</a></td>
+  </tr>
+  {% endfor %}
+
+
+
+</table>
+add count user <a href="{% url 'form_creat' %}">clik her</a>
+</body>
+</html>

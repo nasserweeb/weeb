@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>show data</title>
+   
+</head>
+<body>
+<h1> عرض البيانات</h1> <br>
+<form method="post">
+    {% csrf_token  %}
+    {{f}}
+    <input type="submit" value="send">
+</form>
+</body>
+</html>

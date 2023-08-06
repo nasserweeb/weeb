@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>udate</title>
+</head>
+<body>
+<h1> تعديل دخولك</h1>
+<form method="POST"  action="{% url 'backend2' id_form %}">
+     {% csrf_token  %}
+     FullName : <input type="text" name="txtname" value="{{data.fullname}}"> <br>
+     Email : <input type="email" name="txtemail" value="{{data.email}}"> <br>
+     Age : <input type="number" name="txtage" value="{{data.age}}"> <br>
+    BirthDay: <input type="date" name="txtbarty" value="{{data.barty}}"> <br>
+    <input type="submit" value="update">
+</form>
+</body>
+</html>
